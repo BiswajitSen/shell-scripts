@@ -1,0 +1,8 @@
+#!/bin/zsh
+cat store | tr "\n" " " | sed "s/.*\(.\) \(.\)/\1 \2 + p/" | dc >> store;
+cat store | tr "\n" " " | sed "s/.*\(.\) \(.\)/\1 \2 + p/" | dc >> store;
+cat store | tr "\n" " " > res_store 
+echo The 2th term is :
+cut -f2 -w res_store
+echo The Series is listed below :
+cut -w -f1-2 res_store

@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+echo "0 1" > dcfile_two.sr
+jot -b "d sr + lr r " $1 > dcfile.sr
+sed  "$1s/.*/srp/" dcfile.sr >> dcfile_two.sr 
+# echo p >> dcfile_two.sr
+echo "The $1th element is :"
+dc -f dcfile_two.sr
+

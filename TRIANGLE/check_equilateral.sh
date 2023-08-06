@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+FIRST_ANGLE=$1
+SECOND_ANGLE=$2
+THIRD_ANGLE=$3
+
+IS_EQUILATERAL=0
+
+
+if [ $FIRST_ANGLE -ne 60 ]; then
+    IS_EQUILATERAL=1
+fi
+
+
+if [ $SECOND_ANGLE -ne 60 ]; then
+    IS_EQUILATERAL=1
+fi
+
+
+if [ $THIRD_ANGLE -ne 60 ]; then
+    IS_EQUILATERAL=1
+fi
+
+echo $IS_EQUILATERAL
